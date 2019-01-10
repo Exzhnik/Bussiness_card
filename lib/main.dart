@@ -73,9 +73,12 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Container horizontalLayout() {
     return new Container(
-      child: Container(child: Row(children: <Widget>[Link2(),Container(child: Column(
+      child: Container(child: Row(children: <Widget>[Link2(),Expanded(child: Column(
         children: <Widget>[
-          Mytext(),TextInput(),
+          Mytext(),TextInput(),Button(),LocationIcons(
+          icons: null,
+        ),
+        IconsLoc()
         ],
       ))],),
       ),);
