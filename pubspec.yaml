@@ -16,7 +16,8 @@ dependencies:
   flutter:
     sdk: flutter
   transparent_image: ^0.1.0
-  auto_size_text: ^0.3.0  
+  auto_size_text: ^0.3.0 
+  url_launcher: ^4.0.3 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -45,9 +46,9 @@ flutter:
   assets:
      - res/image/1.jpeg
      - res/image/1_2.jpeg
-     - res/image/gmail.png
+     - res/image/instagram.png
      - res/image/telegram.png
-     - res/image/linkedin.png
+     - res/image/phone.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

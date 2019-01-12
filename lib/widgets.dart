@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:auto_size_text/auto_size_text.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-//Icon Gmail
-class Gmail extends StatelessWidget {
+//Icon Instagram
+class Instagram extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var assetsImage_1 = new AssetImage('res/image/gmail.png');
+    var assetsImage_1 = new AssetImage('res/image/instagram.png');
 
     var image_1 = new Image(
       image: assetsImage_1,
       height: 32.0,
       width: 32.0,
     );
-    return new Container(child: image_1);
+    return new Container(child: new FlatButton(onPressed: () => launch('https://is.gd/sJjWcr'),child: image_1),);
   }
 }
 
@@ -25,22 +25,22 @@ class Telegram extends StatelessWidget {
       image: assetsImage2,
       height: 32.0,
       width: 32.0,
-    );
-    return new Container(child: image_2);
+      );
+    return new Container(child: new FlatButton(onPressed: () => launch('https://t.me/Exzhnik'),child: image_2, padding: EdgeInsets.all(0),),);
   }
 }
 
-//Icon Linkedin
-class Linkedin extends StatelessWidget {
+//Icon Phone
+class Phone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var assetsImage_3 = new AssetImage('res/image/linkedin.png');
+    var assetsImage_3 = new AssetImage('res/image/phone.png');
     var image_3 = new Image(
       image: assetsImage_3,
       height: 32.0,
       width: 32.0,
     );
-    return new Container(child: image_3);
+    return new Container(child: new FlatButton(onPressed: () => launch("tel://+79064028160"),child: image_3,),);
   }
 }
 
@@ -114,16 +114,16 @@ class IconsLoc extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Container(
-              padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
-              child: new Gmail(),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: new Instagram(),
             ),
             new Container(
-              padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
               child: new Telegram(),
             ),
             new Container(
-              padding: EdgeInsets.fromLTRB(8, 8, 8, 8),
-              child: new Linkedin(),
+              padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
+              child: new Phone(),
             ),
           ],
         ),
@@ -170,7 +170,7 @@ class Button extends StatelessWidget {
         color: Theme.of(context).accentColor,
         elevation: 4.0,
         splashColor: Colors.deepPurpleAccent,
-        onPressed: () {},
+        onPressed: () => launch('mailto:exzhnik@gmail.com?subject=News&body=New%20plugin'),
       ),
     );
   }

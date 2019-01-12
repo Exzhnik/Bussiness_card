@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final bool isLandscape = orientation == Orientation.landscape;
     return Scaffold(
       primary: !isLandscape,
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Center(
           child: Text(widget.title),
@@ -73,15 +74,25 @@ class _MyHomePageState extends State<MyHomePage> {
 
   Container horizontalLayout() {
     return new Container(
-      child: Container(child: Row(children: <Widget>[Link2(),Expanded(child: Column(
-        children: <Widget>[
-          Mytext(),TextInput(),Button(),LocationIcons(
-          icons: null,
+      child: Container(
+        child: Row(
+          children: <Widget>[
+            Link2(),
+            Expanded(
+                child: Column(
+              children: <Widget>[
+                Mytext(),
+                TextInput(),
+                Button(),
+                LocationIcons(
+                  icons: null,
+                ),
+                IconsLoc()
+              ],
+            ))
+          ],
         ),
-        IconsLoc()
-        ],
-      ))],),
-      ),);
-       
-    }
+      ),
+    );
+  }
 }
