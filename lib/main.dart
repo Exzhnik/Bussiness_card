@@ -1,6 +1,6 @@
 import 'package:business_card/widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:path/path.dart';
+import 'widgets.dart';
 
 void main() => runApp(MyApp());
 
@@ -30,6 +30,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  final message = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final Orientation orientation = MediaQuery.of(context).orientation;
@@ -62,8 +64,8 @@ class _MyHomePageState extends State<MyHomePage> {
         Linetext(),
         Mytext(),
         Linetext(),
-        TextInput(),
-        Button(),
+        new TextSend(message: message),
+        new ButtonNew(message: message),
         LocationIcons(
           icons: null,
         ),
@@ -81,9 +83,14 @@ class _MyHomePageState extends State<MyHomePage> {
             Expanded(
                 child: Column(
               children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.fromLTRB(0.0, 10.0, 00.0, 0.0),
+                ),
+                Linetext(),
                 Mytext(),
-                TextInput(),
-                Button(),
+                Linetext(),
+                new TextSend(message: message),
+                new ButtonNew(message: message),
                 LocationIcons(
                   icons: null,
                 ),

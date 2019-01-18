@@ -12,7 +12,10 @@ class Instagram extends StatelessWidget {
       height: 32.0,
       width: 32.0,
     );
-    return new Container(child: new FlatButton(onPressed: () => launch('https://is.gd/sJjWcr'),child: image_1),);
+    return new Container(
+      child: new FlatButton(
+          onPressed: () => launch('https://is.gd/sJjWcr'), child: image_1),
+    );
   }
 }
 
@@ -25,8 +28,14 @@ class Telegram extends StatelessWidget {
       image: assetsImage2,
       height: 32.0,
       width: 32.0,
-      );
-    return new Container(child: new FlatButton(onPressed: () => launch('https://t.me/Exzhnik'),child: image_2, padding: EdgeInsets.all(0),),);
+    );
+    return new Container(
+      child: new FlatButton(
+        onPressed: () => launch('https://t.me/Exzhnik'),
+        child: image_2,
+        padding: EdgeInsets.all(0),
+      ),
+    );
   }
 }
 
@@ -40,7 +49,12 @@ class Phone extends StatelessWidget {
       height: 32.0,
       width: 32.0,
     );
-    return new Container(child: new FlatButton(onPressed: () => launch("tel://+79064028160"),child: image_3,),);
+    return new Container(
+      child: new FlatButton(
+        onPressed: () => launch("tel://+79064028160"),
+        child: image_3,
+      ),
+    );
   }
 }
 
@@ -51,13 +65,11 @@ class Link extends StatelessWidget {
     var assetsImage_4 = new AssetImage('res/image/1.jpeg');
     var image_4 = new Image(
       image: assetsImage_4,
-      
+
       // width: 720.0,
       //     height: 0.0,
     );
-    return  
-    new Container(alignment: Alignment.topLeft,
-      child: image_4);
+    return new Container(alignment: Alignment.topLeft, child: image_4);
   }
 }
 
@@ -74,6 +86,7 @@ class Link2 extends StatelessWidget {
     return new Container(child: image_4);
   }
 }
+
 //About me
 class Mytext extends StatelessWidget {
   const Mytext({
@@ -86,18 +99,17 @@ class Mytext extends StatelessWidget {
       children: <Widget>[
         Padding(
           padding: EdgeInsets.all(8.0),
-          child: Text("""
+          child: Text(
+            """
 I am a beginner Android Developer.
 At 31, I decided to chage the field 
 of activity. In my daily schedule
 I allocate time to learn a new profession
-""", 
+""",
             style: TextStyle(
               fontSize: 18.0,
-              
               color: Colors.cyan,
             ),
-            
           ),
         ),
       ],
@@ -108,7 +120,8 @@ I allocate time to learn a new profession
 class IconsLoc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(mainAxisAlignment: MainAxisAlignment.center,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -150,46 +163,6 @@ class LocationIcons extends StatelessWidget {
             child: icons,
           ),
         ],
-      ),
-    );
-  }
-}
-
-class Button extends StatelessWidget {
-  const Button({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: FractionalOffset.topRight,
-      padding: EdgeInsets.all(10.0),
-      child: new RaisedButton(
-        child: Text('Send'),
-        color: Theme.of(context).accentColor,
-        elevation: 4.0,
-        splashColor: Colors.deepPurpleAccent,
-        onPressed: () => launch('mailto:exzhnik@gmail.com?subject=News&body=New%20plugin'),
-      ),
-    );
-  }
-}
-
-class TextInput extends StatelessWidget {
-  const TextInput({
-    Key key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(8.0),
-      child: new TextField(
-        decoration: new InputDecoration(
-            hintStyle: new TextStyle(color: Colors.cyan, fontSize: 20.0),
-            contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 2.0),
-            hintText: 'Message'),
       ),
     );
   }
@@ -247,6 +220,54 @@ class Linetext extends StatelessWidget {
         height: 1.5,
         color: Colors.black,
       ),
+    );
+  }
+}
+
+class TextSend extends StatelessWidget {
+  const TextSend({
+    Key key,
+    @required this.message,
+  }) : super(key: key);
+
+  final TextEditingController message;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      child: new TextField(
+        controller: message,
+        decoration: new InputDecoration(
+            hintStyle: new TextStyle(color: Colors.cyan, fontSize: 20.0),
+            contentPadding: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 2.0),
+            hintText: 'Message'),
+      ),
+    );
+  }
+}
+
+class ButtonNew extends StatelessWidget {
+  const ButtonNew({
+    Key key,
+    @required this.message,
+  }) : super(key: key);
+
+  final TextEditingController message;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      alignment: FractionalOffset.topRight,
+      padding: EdgeInsets.all(10.0),
+      child: new RaisedButton(
+          child: Text('Send'),
+          color: Theme.of(context).accentColor,
+          elevation: 4.0,
+          splashColor: Colors.deepPurpleAccent,
+          onPressed: () => launch(
+              'mailto:exzhnik@gmail.com?subject=Job=${message.text}'),
+          content: Text(message.text)),
     );
   }
 }
