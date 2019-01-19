@@ -266,7 +266,7 @@ class ButtonNew extends StatelessWidget {
           elevation: 4.0,
           splashColor: Colors.deepPurpleAccent,
           onPressed: () => launch(
-              'mailto:exzhnik@gmail.com?subject=Job=${message.text}'),
+              'mailto:exzhnik@gmail.com?subject=Job&body=${message.text}'),
           content: Text(message.text)),
     );
   }
