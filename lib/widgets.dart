@@ -102,7 +102,7 @@ class Mytext extends StatelessWidget {
           child: Text(
             """
 I am a beginner Android Developer.
-At 31, I decided to chage the field 
+At 31, I decided to change the field 
 of activity. In my daily schedule
 I allocate time to learn a new profession
 """,
