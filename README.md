@@ -1,16 +1,7 @@
-# business_card
+Приложение визитная карточка, написаная на Flutter, для связи со мной.
+В поле Message можно написать мне сообщение которое после отправки будет доставлено с помощью встроенного  почтового клиента. Так же со мной связаться с помощью иконок Instagram и Telegram можно со мной связаться
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
-
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+<p align="center">
+  <img src="https://github.com/Exzhnik/Bussiness_card/blob/master/Vertical%20Layout.jpg" width="350" title="hover text">
+  
+</p>
