@@ -3,5 +3,5 @@
 
 <p align="center">
   <img src="https://github.com/Exzhnik/Bussiness_card/blob/master/Vertical%20Layout.jpg" width="350" title="hover text">
-  <img src="https://github.com/Exzhnik/Bussiness_card/blob/master/Vertical%20Layout.jpg" width="350" alt="accessibility text">
+  <img src="https://github.com/Exzhnik/Bussiness_card/blob/master/Horizontal%20Layout.jpg" width="350" alt="accessibility text">
 </p>
